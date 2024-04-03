@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid h-100">
+  <div class="container-animate container-fluid">
     <div class="row h-100 align-items-stretch">
-      <div class="col-4 col-xl-3 bg-tertiary text-light d-flex flex-column pe-0">
+      <div class="col-4 bg-tertiary text-light d-flex flex-column pe-0">
         <div class="ms-2 ms-md-3 ms-lg-4 ms-xl-5 mt-5 pt-3">
           <h1 class="fw-normal border-bottom border-light border-2 fs-3">
             Contact
@@ -71,9 +71,12 @@
               English
             </li>
           </ul>
+          <div class="d-flex justify-content-end px-3">
+            <a href="https://github.com/danlars/Resume" target="_blank" class="github-referral" />
+          </div>
         </div>
       </div>
-      <div class="col-8 col-xl-9 text-secondary-emphasis">
+      <div class="col-8 text-secondary-emphasis">
         <h1 class="fw-normal mt-3 mb-1 text-dark">
           <span class="fw-semibold">Daniel Joachim</span> Larsen
         </h1>
@@ -139,7 +142,6 @@
 import { computed } from 'vue';
 import {EnvironmentSingleton} from './singletons/environment.singleton';
 import {environmentKey} from './constants/environmentKey.const';
-
 const environment = EnvironmentSingleton.getInstance();
 const mobilePhoneNumber = computed(() => environment.getEnvironmentValue(environmentKey.MOBILE_PHONE_NUMBER));
 const mobilePhoneNumberVisual = computed(() => environment.getEnvironmentValue(environmentKey.MOBILE_PHONE_NUMBER_VISUAL));
@@ -175,6 +177,43 @@ const linkedin = computed(() => environment.getEnvironmentValue(environmentKey.L
     border-radius: 50%;
     left: -9px;
     top: -16px;
+  }
+}
+
+.github-referral {
+  background-image: var(--github-logo);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.container-animate {
+  animation-name: containerAnimate;
+  animation-duration: .6s;
+}
+
+@keyframes containerAnimate {
+  0% {
+    overflow: hidden;
+    width: 80px;
+    margin-top: -100%;
+    height: 100vh;
+  }
+  50% {
+    overflow: initial;
+    width: 80px;
+    margin-top: 0;
+    height: 100vh;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
   }
 }
 </style>
