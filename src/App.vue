@@ -196,6 +196,7 @@ const linkedin = computed(() => environment.getEnvironmentValue(environmentKey.L
 .container-animate {
   animation-name: containerAnimate;
   animation-duration: .6s;
+  height: 100%;
 }
 
 @keyframes containerAnimate {
@@ -213,7 +214,7 @@ const linkedin = computed(() => environment.getEnvironmentValue(environmentKey.L
   }
   100% {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 }
 </style>
