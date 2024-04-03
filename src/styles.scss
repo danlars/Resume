@@ -12,16 +12,26 @@ $quaternary: #99a1aa;
 @import "~bootstrap/scss/variables";
 
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "tertiary":  $tertiary,
-  "quaternary":  $quaternary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "quaternary": $quaternary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: .8rem,
 );
 
 @import "~bootstrap/scss/variables-dark";
@@ -69,11 +79,4 @@ $theme-colors: (
 @import "~bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
-#app {
-    min-height: 100vh;
-    width: 100vw;
-}
-
-.fs-7 {
-    font-size: .8rem;
-}
+@import "styles/main";

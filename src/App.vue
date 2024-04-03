@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid h-100">
     <div class="row h-100 align-items-stretch">
-      <div class="col-4 bg-tertiary text-light d-flex flex-column pe-0">
-        <div class="ms-5 mt-5 pt-3">
+      <div class="col-4 col-xl-3 bg-tertiary text-light d-flex flex-column pe-0">
+        <div class="ms-2 ms-md-3 ms-lg-4 ms-xl-5 mt-5 pt-3">
           <h1 class="fw-normal border-bottom border-light border-2 fs-3">
             Contact
           </h1>
@@ -73,7 +73,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-8 text-secondary-emphasis">
+      <div class="col-8 col-xl-9 text-secondary-emphasis">
         <h1 class="fw-normal mt-3 mb-1 text-dark">
           <span class="fw-semibold">Daniel Joachim</span> Larsen
         </h1>

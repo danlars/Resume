@@ -1,0 +1,17 @@
+
+#app {
+    min-height: 100vh;
+    width: 100vw;
+  }
+  
+  @media print and (orientation: portrait) {
+    #app {
+      height: 59.4cm;
+    }
+  }
+  
+  @media print and (orientation: landscape) {
+    #app {
+      height: 42cm;
+    }
+  }
