@@ -13,7 +13,6 @@
               <span class="text-quaternary">(Mobile)</span>
             </li>
             <li><a :href="'mailto:' + email" class="text-light text-decoration-none">{{ email }}</a></li>
-            <li><a :href="linkedin" target="_blank" class="text-light text-decoration-none">LinkedIn</a></li>
           </ul>
           <h1 class="fw-normal border-bottom border-light border-2 fs-3">
             Educations
@@ -71,8 +70,11 @@
               English
             </li>
           </ul>
-          <div class="d-flex justify-content-end px-3">
-            <a href="https://github.com/danlars/Resume" target="_blank" class="github-referral" />
+          <div class="d-flex justify-content-end px-3 connects">
+            <a :href="linkedin" target="_blank" class="linkedin-connect bg-light">
+              <img src="/linkedin.png" alt="LinkedIn logo" class="image-source-dimensions" />
+            </a>
+            <a href="https://github.com/danlars/Resume" target="_blank" class="github-connect image-source-dimensions" />
           </div>
         </div>
       </div>
@@ -180,13 +182,25 @@ const linkedin = computed(() => environment.getEnvironmentValue(environmentKey.L
   }
 }
 
-.github-referral {
+.connects {
+  gap: 1rem;
+}
+
+.image-source-dimensions {
+  width: 40px;
+  height: 40px;
+}
+
+.linkedin-connect {
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.github-connect {
   background-image: var(--github-logo);
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
-  width: 40px;
-  height: 40px;
 
   &:hover {
     opacity: .7;
