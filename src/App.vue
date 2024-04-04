@@ -71,8 +71,8 @@
             </li>
           </ul>
           <div class="d-flex justify-content-end px-3 connects">
-            <a :href="linkedin" target="_blank" class="linkedin-connect bg-light">
-              <img src="/linkedin.png" alt="LinkedIn logo" class="image-source-dimensions" />
+            <a :href="linkedin" target="_blank" class="linkedin-connect">
+              <img src="/linkedin.png" alt="LinkedIn logo" class="image-source-dimensions bg-light" />
             </a>
             <a href="https://github.com/danlars/Resume" target="_blank" class="github-connect image-source-dimensions" />
           </div>
@@ -193,7 +193,14 @@ const linkedin = computed(() => environment.getEnvironmentValue(environmentKey.L
 
 .linkedin-connect {
   display: inline-block;
-  border-radius: 5px;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  img {
+    border-radius: 5px;
+  }
 }
 
 .github-connect {
