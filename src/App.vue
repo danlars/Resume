@@ -9,11 +9,11 @@
           </h1>
           <List>
             <li>
-              <a :href="'tel:' + mobilePhoneNumber" class="text-light text-decoration-none">{{ mobilePhoneNumberVisual }}</a>
+              <a :href="'tel:' + mobilePhoneNumber" class="text-light text-decoration-none text-break">{{ mobilePhoneNumberVisual }}</a>
               &nbsp;
               <span class="text-quaternary">(Mobile)</span>
             </li>
-            <li><a :href="'mailto:' + email" class="text-light text-decoration-none">{{ email }}</a></li>
+            <li><a :href="'mailto:' + email" class="text-light text-decoration-none text-break">{{ email }}</a></li>
           </List>
           <h1 class="fw-normal border-bottom border-light border-2 fs-3">
             Educations
